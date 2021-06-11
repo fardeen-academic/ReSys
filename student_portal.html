@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Student</title>
+        <link rel="stylesheet" href="css/student.css">
+        <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Sen&display=swap" rel="stylesheet">
+
+    </head>
+    <body onload="interval()">
+        <div id="preloader">
+            <img src="/img/infinity.svg">
+            <h3>Loading...</h3>
+        </div>
+
+        <div class="container">
+            <div class="left">
+                <table class="logotable">
+                    <tr>
+                        <td><img class="logo" src="img/rsz_logo.png"></td>
+                        <td><h3 class="stamford">Stamford University Bangladesh</h3></td>
+                    </tr>
+                </table>
+                  
+                <ul class="menu">
+                    <li onclick="profile()"><i class="fa fa-user" aria-hidden="true"></i>Profile</li>
+                    <li onclick="result()"><i class="fas fa-search"></i>Result</li>
+                    <li onclick="logout()"><i class="fas fa-sign-out-alt"></i>Log out</li>                    
+                </ul>
+                <div class="contact">
+                    <h3>Having troubles?</h4>
+                    <h4>Contact us</h3>
+                </div>
+                
+            </div>
+            <div class="name_pic">
+                <table class="namepic">
+                    <tr>
+                        <td class="name"><h2 id="name"></h2></td>
+                        <td class="profilepic"><img id="profilepic" src="img/profile.svg"></td>
+                    </tr>
+                </table>
+                </span>
+                <span class="profilepic">
+                
+                </span>
+            </div>
+            <div class="main">
+                <div class="profile">
+                </div>
+                <div class="result"></div>
+                <div class="construction">
+                    <img src="img/construction.svg" width="500px">
+                    <br><br><br>
+                    <h1>This option is under construction.</h1>
+                </div>
+            </div>
+        </div>
+        <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-app.js"></script>
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+            https://firebase.google.com/docs/web/setup#available-libraries -->
+        <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-analytics.js"></script>
+        <!-- Add Firebase products that you want to use -->
+        <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-firestore.js"></script>
+        <script src="js/firebase.js"></script>
+        <script src="js/student.js"></script>
+    <script>
+        var preloader = document.getElementById('preloader');
+        var name = document.getElementById('name');
+        function interval(){
+            setInterval(loaderfunc, 3000);
+        }
+        function loaderfunc(){
+            preloader.style.display='none'
+        }
+    </script>
+
+    </body>
+</html>
