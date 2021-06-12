@@ -48,10 +48,9 @@
                 </span>
             </div>
             <div class="main">
-                <div class="profile">
-                </div>
-                <div class="result"></div>
-                <div class="construction">
+                <div id="profile" class="profile"><h1>Profile</h1></div>
+                <div id="result" class="result"></div>
+                <div id="construction" class="construction">
                     <img src="img/construction.svg" width="500px">
                     <br><br><br>
                     <h1>This option is under construction.</h1>
@@ -67,16 +66,16 @@
         <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-firestore.js"></script>
         <script src="js/firebase.js"></script>
         <script src="js/student.js"></script>
-    <script>
-        var preloader = document.getElementById('preloader');
-        var name = document.getElementById('name');
-        function interval(){
-            setInterval(loaderfunc, 3000);
-        }
-        function loaderfunc(){
-            preloader.style.display='none'
-        }
-    </script>
+        <script>
+            var preloader = document.getElementById('preloader');
+            var name = document.getElementById('name');
+            function interval(){
+                setInterval(loaderfunc, 3000);
+            }
+            function loaderfunc(){
+                preloader.style.display='none'
+            }
+        </script>
 
     </body>
 </html>

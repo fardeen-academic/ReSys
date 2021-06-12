@@ -2,6 +2,28 @@ var db = firebase.firestore();
 var uid;
 var user = firebase.auth().currentUser;
 
+
+var p = document.getElementById("profile");
+var r = document.getElementById("result");
+var c = document.getElementById("construction");
+p.style.display = "block";
+c.style.display = "none";
+    
+
+function profile(){
+    p.style.display = "block";
+    c.style.display = "none";
+ 
+}
+function result(){
+    p.style.display = "none";
+    c.style.display = "block";
+
+}
+
+
+
+
 firebase.auth().onAuthStateChanged(function(user){
     if(user){
         uid = user.uid;
@@ -28,20 +50,4 @@ function logout(){
       }).catch((error) => {
         console.log("Error logging out");
       });
-}
-
-
-var p = document.getElementById("profile");
-var r = document.getElementById("result");
-var c = document.getElementById("construction");
-    
-
-function profile(){
-    window.alert("This section is under construction")
-    c.style.display = "none";
-}
-function result(){
-    x.style.display = "none";
-    c.style.display = "block";
-
 }
