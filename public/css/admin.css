@@ -79,6 +79,7 @@ body{
     height: 90vh;
     position: relative;
 
+
 }
 .logotable{
     height: 15%;
@@ -146,7 +147,7 @@ i{
     display: inline;
     border-radius: 0 20px 0 0;
     background-color: #ffffff;
-    border: #0c0c16 2px solid;
+    /*border: #0c0c16 2px solid;*/
     border-bottom: 0;
     box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 10px -30px;
     position:relative;
@@ -171,7 +172,7 @@ i{
     height: 100%;
     border-radius: 0 0 20px 0;
     background-color: #f8f8f8;
-    border: #0c0c16 2px solid;
+    /*border: #0c0c16 2px solid;*/
     border-top: 0;
     padding: 20px 30px 20px 30px;
 }
@@ -222,6 +223,12 @@ h4{
     bottom: 50%;
 }
 
+
+.students ul {
+    list-style-type: none;
+    padding-left: 0px;
+  }
+
 #studentlist li{
     background-color: #ffffff;
     border-radius: 10px;
@@ -230,27 +237,49 @@ h4{
 }
 
 #studentlist li span{
+    display: inline-block;
     padding-left: 10px;
     padding-right: 10px;
-
+    width: 350px;
+    overflow: hidden;
 }
+
+#studentlist li:hover{
+    border: 2px #708090 solid;
+}
+
+#studentlist li:nth-child(1){
+    background-color: #708090;
+    color: #ffffff;
+}
+#studentlist li:nth-child(1) span:nth-child(2){
+    color: #ffffff;
+}
+
 
 #studentlist li span:nth-child(2){
     padding-left: 10px;
     padding-right: 10px;
     color: #8f8f8f;
+    width: max-content;
+    display: inline-block;
+    width: 280px;
 
 }
 
-#studentlist li span{
-    padding-left: 10px;
-    padding-right: 10px;
+#studentlist{
+    margin-top: 40px;
 
 }
 form{
     padding: 20px;
+    text-align: center;
+    margin-left: 35%;
 }
-
+#addstudent{
+    text-align: center;
+    padding-top: 5%;
+}
 input{
     border: 1px;
     width: 300px;
@@ -259,6 +288,7 @@ input{
     margin: 20px;
     border-radius: 5px;
     padding: 10px;
+    padding-left: 30px;
     font-size: 16px;
     box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 10px -30px;
 
@@ -267,13 +297,15 @@ input{
     border: 1px solid;
     color: black;
     background-color: white;
-    width: 320px;
+    width: 340px;
     height: 55px;
     display: block;
     margin: 20px;
     border-radius: 5px;
     padding: 10px;
     font-size: 16px;
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 10px -30px;
+
 }
 
 #savestudent:hover{

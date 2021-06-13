@@ -80,12 +80,20 @@ function renderstudent(doc){
 
     studentlist.appendChild(li);    
 }
-
+/*
 db.collection('student').get().then((snapshot)=>{
     snapshot.docs.forEach(doc=>{
         renderstudent(doc);
     })
 })
+*/
+
+db.collection('student').get().then((onSnapshot)=>{
+    onSnapshot.docs.forEach(doc=>{
+        renderstudent(doc);
+    })
+})
+
 
 const registerform = document.querySelector('#registerstudent');
 registerform.addEventListener('submit',(e)=>{
