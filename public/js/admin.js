@@ -125,3 +125,22 @@ registerform.addEventListener('submit',(e)=>{
     
     
 })
+
+var preloader = document.getElementById('preloader');
+            var name = document.getElementById('name');
+            function interval(){
+                setInterval(loaderfunc, 0000);
+            }
+            function loaderfunc(){
+                preloader.style.display='none'
+            }
+            var logoutmodal = document.getElementById('logoutmodal');
+            function logout_modal(){
+                if(logoutmodal.style.display=='none'){
+                    logoutmodal.style.display='block';
+                }
+                else{
+                    logoutmodal.style.display='none';
+                }
+                
+            }
