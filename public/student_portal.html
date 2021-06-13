@@ -6,7 +6,7 @@
         <script src="https://kit.fontawesome.com/a81368914c.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Sen&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Sen&family=Varela+Round&display=swap" rel="stylesheet">
 
     </head>
     <body onload="interval()">
@@ -24,10 +24,13 @@
                     </tr>
                 </table>
                   
-                <ul class="menu">
-                    <li onclick="profile()"><i class="fa fa-user" aria-hidden="true"></i>Profile</li>
-                    <li onclick="result()"><i class="fas fa-search"></i>Result</li>
-                    <li onclick="logout()"><i class="fas fa-sign-out-alt"></i>Log out</li>                    
+                <ul class="menu" id="menu">
+                    <li class="btn active" onclick="profile()"><i class="fa fa-user" aria-hidden="true"></i>Profile
+                        <i class="fas fa-angle-right"></i></li>
+                    <li class="btn" onclick="result()"><i class="fas fa-search"></i>Result
+                        <i class="fas fa-angle-right"></i></li>
+                    <li class="btn" onclick="logout()"><i class="fas fa-sign-out-alt"></i>Log out
+                        <i class="fas fa-angle-right"></i></li>                    
                 </ul>
                 <div class="contact">
                     <h3>Having troubles?</h4>
@@ -37,6 +40,7 @@
             </div>
             <div class="name_pic">
                 <table class="namepic">
+                    <h2 id="pagetitle">Profile</h2>
                     <tr>
                         <td class="name"><h2 id="name"></h2></td>
                         <td class="profilepic"><img id="profilepic" src="img/profile.svg"></td>
@@ -48,7 +52,7 @@
                 </span>
             </div>
             <div class="main">
-                <div id="profile" class="profile"><h1>Profile</h1></div>
+                <div id="profile" class="profile"></div>
                 <div id="result" class="result"></div>
                 <div id="construction" class="construction">
                     <img src="img/construction.svg" width="500px">

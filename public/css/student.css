@@ -64,14 +64,22 @@ li{
     
 }
 
-li:hover{
+.fa-angle-right{
+    margin-left: auto;
+    float:right;
+    display: none;
+}
+
+.btn:hover, .active{
     color: #ebf2ff;
     background-color: #4e55eb;
     transition: all 0.4s;
 }
-li:focus{
-    color: #ebf2ff;
-    background-color: #4e55eb;
+.fa-angle-right{
+    display: none;
+}
+.btn:hover .fa-angle-right{
+    display: block;
 }
 
 i{
@@ -98,6 +106,12 @@ i{
     box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 10px -30px;
     position:relative;
     z-index:2;
+}
+#pagetitle{
+    display: inline;
+    float: left;
+    margin-left: 50px;
+    color: #2d3041;
 }
 
 .namepic{

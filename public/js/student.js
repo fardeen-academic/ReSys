@@ -6,6 +6,7 @@ var user = firebase.auth().currentUser;
 var p = document.getElementById("profile");
 var r = document.getElementById("result");
 var c = document.getElementById("construction");
+var pagetitle = document.getElementById("pagetitle")
 p.style.display = "block";
 c.style.display = "none";
     
@@ -13,15 +14,25 @@ c.style.display = "none";
 function profile(){
     p.style.display = "block";
     c.style.display = "none";
+    document.getElementById("pagetitle").innerHTML = "Profile";
  
 }
 function result(){
     p.style.display = "none";
     c.style.display = "block";
+    document.getElementById("pagetitle").innerHTML = "Result";
 
 }
 
-
+var header = document.getElementById("menu");
+var btns = header.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+  var current = document.getElementsByClassName("active");
+  current[0].className = current[0].className.replace(" active", "");
+  this.className += " active";
+  });
+}
 
 
 firebase.auth().onAuthStateChanged(function(user){

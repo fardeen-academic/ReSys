@@ -73,6 +73,13 @@ h2{
                                     supported by Chrome, Edge, Opera and Firefox */
   }
 
+
+i{
+    position:relative;
+    z-index:9;
+    right: 40px;
+  }
+
 @media screen and (max-width: 1000px){
     img{
         width: 75%;
