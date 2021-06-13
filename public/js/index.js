@@ -1,8 +1,13 @@
+var db = firebase.firestore();
+var uid;
+var role = "student";
+var user = firebase.auth().currentUser;
 firebase.auth().onAuthStateChanged(function(user){
     if(user){
         var uid = user.uid;
-        window.location = 'student_portal.html';
-    }
+        console.log("UID = "+uid);
+        window.location = 'admin.html';
+    };
 });
 
 function login(){
