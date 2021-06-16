@@ -1,10 +1,14 @@
 *{
     font-family: 'Sen', sans-serif;
-    font-weight: 500;
-}
+    font-weight: 500;}
 body{
     background-color: #adcce0;
 }
+body {    
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
 #preloader{
     position: fixed;
     width: 100%;
@@ -116,7 +120,6 @@ li{
     display: none;
     margin-left: auto;
     float:right;
-
 }
 
 .btn:hover, .active{
@@ -229,6 +232,11 @@ h4{
     padding-left: 0px;
   }
 
+#studentlist{
+    overflow-y: scroll;
+    height: 600px;
+}
+
 #studentlist li{
     background-color: #ffffff;
     border-radius: 10px;
@@ -246,6 +254,7 @@ h4{
 
 #studentlist li:hover{
     border: 2px #708090 solid;
+    background-color: #EBF2FF;
 }
 
 #studentlist li:nth-child(1){
@@ -312,4 +321,23 @@ input{
     border: 1px solid;
     color: white;
     background-color: black;
+}
+
+@media only screen and (max-width:900px){
+    .left{
+        display: none;
+        position: fixed;
+        width: 100%;
+        z-index: 99999;
+    }
+    .fa-bars{
+        display: block;
+        float: left;
+        margin: 25px;
+    }
+    .logout_modal{
+        width: 90%;
+        top: 25%;
+        left: 0;
+    }
 }
