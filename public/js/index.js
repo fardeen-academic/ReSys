@@ -6,7 +6,7 @@ firebase.auth().onAuthStateChanged(function(user){
     if(user){
         var uid = user.uid;
         console.log("UID = "+uid);
-        window.location = 'admin.html';
+        window.location = 'student_portal.html';
     };
 });
 
