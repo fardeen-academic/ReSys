@@ -17,7 +17,7 @@
         <div id="logoutmodal">
             <div class="logout_modal">
                 <h2>Are you sure to log out?</h2><br>
-                <button class="logout_cancel" onclick="logout_modal()">Cancel</button>
+                <button class="logout_cancel" onclick="exit_logout_modal()">Cancel</button>
                 <button class="logout_button" onclick="logout()">Logout</button>
                 
             </div>
@@ -33,7 +33,10 @@
                 </table>
                   
                 <ul class="menu" id="menu">
+
                     <li class="btn active" onclick="profile()"><i class="fa fa-user" aria-hidden="true"></i>Profile
+                        <i class="fas fa-angle-right"></i></li>
+                    <li class="btn" onclick="registration()"><i class="fa fa-user" aria-hidden="true"></i>Registration
                         <i class="fas fa-angle-right"></i></li>
                     <li class="btn" onclick="result()"><i class="fas fa-search"></i>Result
                         <i class="fas fa-angle-right"></i></li>
@@ -62,6 +65,73 @@
             <div class="main">
                 <div id="profile" class="profile"></div>
                 <div id="result" class="result"></div>
+                <div id="registration" class="registration">
+                    <form id="reg_form" class="reg_form">
+                        <h3 class="semester">Select Semester:</h3>
+                        <select id="semester" name="semester">
+                            <option value="1st">1st Semester</option>
+                            <option value="2nd">2nd Semester</option>
+                            <option value="3rd">3rd Semester</option>
+                            <option value="4th">4th Semester</option>
+                            <option value="5th">5th Semester</option>
+                            <option value="6th">6th Semester</option>
+                            <option value="7th">7th Semester</option>
+                            <option value="8th">8th Semester</option>
+                            <option value="9th">9th Semester</option>
+                            <option value="10th">10th Semester</option>
+                            <option value="11th">11th Semester</option>
+                            <option value="12th">12th Semester</option>
+                        </select>
+                        <table class="sub_table">
+                           <tr id="opt1" style="display: block;">
+                                <td>
+                                    <input type="text" name="sc1" placeholder="Subject Code" style="width: 100px;" onchange="subjectvalue(this.value,1)">
+                                </td>
+                                <td>
+                                    <h4 name="sn1" id="sub1"></h4>
+                                </td>
+                                <td><button id="s2" onclick="return show(2)">Add more</button></td>
+                            </tr>
+                            <tr id="opt2">
+                                <td>
+                                    <input type="text" name="sc2" placeholder="Subject Code" style="width: 100px;" onchange="subjectvalue(this.value,2)">
+                                </td>
+                                <td>
+                                    <h4 name="sn2" id="sub2"></h4>
+                                </td>
+                                <td><button id="s3" onclick="return show(3)">Add more</button></td>
+                            </tr>
+                            <tr id="opt3">
+                                <td>
+                                    <input type="text" name="sc3" placeholder="Subject Code" style="width: 100px;" onchange="subjectvalue(this.value,3)">
+                                </td>
+                                <td>
+                                    <h4 name="sn3" id="sub3"></h4>
+                                </td>
+                                <td><button id="s4" onclick="return show(4)">Add more</button></td>
+                            </tr>
+                            <tr id="opt4">
+                                <td>
+                                    <input type="text" name="sc4" placeholder="Subject Code" style="width: 100px;" onchange="subjectvalue(this.value,4)">
+                                </td>
+                                <td>
+                                    <h4 name="sn3" id="sub4"></h4>
+                                </td>
+                                <td><button id="s5" onclick="return show(5)">Add more</button></td>
+                            </tr>
+                            <tr id="opt5">
+                                <td>
+                                    <input type="text" name="sc5" placeholder="Subject Code" style="width: 100px;" onchange="subjectvalue(this.value,5)">
+                                </td>
+                                <td>
+                                    <h4 name="sn5" id="sub5"></h4>
+                                </td>
+                            </tr>
+                            
+                        </table>
+                        <button id="reg_submit">Submit</button>
+                    </form>
+                </div>
                 <div id="construction" class="construction">
                     <img src="img/construction.svg" width="500px">
                     <br><br><br>
@@ -82,21 +152,24 @@
             var preloader = document.getElementById('preloader');
             var name = document.getElementById('name');
             function interval(){
-                setInterval(loaderfunc, 2000);
+                setInterval(loaderfunc, 000);
             }
             function loaderfunc(){
                 preloader.style.display='none'
             }
             var logoutmodal = document.getElementById('logoutmodal');
             function logout_modal(){
-                if(logoutmodal.style.display=='none'){
-                    logoutmodal.style.display='block';
-                }
-                else{
-                    logoutmodal.style.display='none';
-                }
-                
+                logoutmodal.style.display='block';               
             }
+            function exit_logout_modal(){
+                logoutmodal.style.display='none';               
+            }
+            function show(n){
+                var o = document.getElementById('opt'+n);
+                o.style.display = "block";
+                return false;
+            }
+            
         </script>
 
     </body>

@@ -167,12 +167,13 @@ i{
 .main{
     grid-column: 2/3;
     grid-row: 2/3;
-    height: 100%;
+    height: 95%;
     border-radius: 0 0 20px 0;
     background-color: #f8f8f8;
     border: #0c0c16 2px solid;
     border-top: 0;
-    padding: 0 30px 0 30px;
+    padding: 20px 30px 20px 30px;
+    text-align: center;
 }
 
 
@@ -218,4 +219,53 @@ h4{
     text-align: center;
     padding: 12%;
     bottom: 50%;
+}
+
+.sub_table input, .sub_table button{
+    border-radius: 5px;
+    margin-right: 15px;
+}
+
+.reg_form, .sub_table{
+    margin: auto;
+    padding-top: 15px;
+}
+
+.reg_form button{
+    width: 150px;
+    background-color: #ffffff;
+}
+.reg_form button:hover{
+    background-color: #0c0c16;
+    color: #ffffff;
+}
+
+#reg_submit{
+    width: 300px;
+}
+.sub_table input,button{
+    padding: 15px;
+}
+#sub1, #sub2, #sub3, #sub4, #sub5{
+    padding: 15px;
+    border: 1px black solid;
+    border-radius: 5px;
+    width: 400px;
+    height: 20px;
+    margin-right: 15px;
+}
+
+#opt2, #opt3, #opt4, #opt5{
+    display: none;
+}
+#semester{
+    width: 200px;
+    padding-left: 10px;
+    margin-right: 10px;
+    display: inline;
+    height: 50px;
+}
+.semester{
+    display: inline;
+    margin-right: 20px;
 }
