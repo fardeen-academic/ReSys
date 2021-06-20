@@ -7,7 +7,38 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Sen&family=Varela+Round&display=swap" rel="stylesheet">
+        <style>
+            .result-table{
+                border-collapse: collapse;
+                margin: 0 auto;
+                min-width: 900px;
+                font-size: 1em;
+                border-radius: 10px 10px 0 0;
+                overflow: hidden;
+                box-shadow: 0 0 20px rgba(0,0,0,0.15);
+            }
+            .result-table tr th{
+                text-align: left;
+                background-color: #4e55eb;
+                color: #ffffff;
+                font-weight: bold;
+                padding: 12px 15px;
+            }
 
+            .result-table tr td{
+                text-align: left;
+                padding: 12px 15px;
+                border-bottom: 1px solid #4e55eb;
+            }
+            
+            .result-table tr:nth-of-type(odd){
+                background-color: #dadada;
+                color: #000000;
+            }
+            .result-table tr:last-of-type{
+                border-bottom: 3px solid #4e55eb;
+            }
+        </style>
     </head>
     <body onload="interval()">
         <div id="preloader">
@@ -59,12 +90,106 @@
                 </table>
                 </span>
                 <span class="profilepic">
-                
                 </span>
             </div>
             <div class="main">
-                <div id="profile" class="profile"></div>
-                <div id="result" class="result"></div>
+                <div id="profile" class="profile">
+                    
+                    
+                    <table>
+                        <h3 style="margin-top: 50px;">Welcome,</h3>
+                        <h1 id="sname"></h1>
+                        <img src="img/profile.svg" height="150px">
+                        <h2 id="sid"></h2>
+                        <h3 id="semail"></h3>
+                        <div class="pbtn"">
+                            <button class="btn" onclick="registration()">Registration</button>
+                            <button class="btn" onclick="result()">View Result</button>
+                            
+                        </div>                    
+
+                    </table>
+
+
+
+                </div>
+                <div id="result" class="result">
+                    <form id="resultform">
+                    <select id="semesternum" name="semesternum">
+                        <option value="1st">1st Semester</option>
+                        <option value="2nd">2nd Semester</option>
+                        <option value="3rd">3rd Semester</option>
+                        <option value="4th">4th Semester</option>
+                        <option value="5th">5th Semester</option>
+                        <option value="6th">6th Semester</option>
+                        <option value="7th">7th Semester</option>
+                        <option value="8th">8th Semester</option>
+                        <option value="9th">9th Semester</option>
+                        <option value="10th">10th Semester</option>
+                        <option value="11th">11th Semester</option>
+                        <option value="12th">12th Semester</option>
+                    </select>
+                    <button class="btn">View Result</button>
+                </form>
+                <br>
+                <h1 id="semester">{sn} Semester</h1>
+                <br><br>
+                <table id="result_table" class="result-table">
+                    <tr>
+                        <th>Sl.</th>
+                        <th>Sub Code</th>
+                        <th>Subject Name</th>
+                        <th>Number</th>
+                        <th>GPA</th>
+                        <th>Grade</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td id="s1"></td>
+                        <td id="subn1"></td>
+                        <td id="num1"></td>
+                        <td id="gpa1"></td>
+                        <td id="grade1"></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td id="s2"></td>
+                        <td id="subn2"></td>
+                        <td id="num2"></td>
+                        <td id="gpa2"></td>
+                        <td id="grade2"></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td id="s3"></td>
+                        <td id="subn3"></td>
+                        <td id="num3"></td>
+                        <td id="gpa3"></td>
+                        <td id="grade3"></td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td id="s4"></td>
+                        <td id="subn4"></td>
+                        <td id="num4"></td>
+                        <td id="gpa4"></td>
+                        <td id="grade4"></td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td id="s5"></td>
+                        <td id="subn5"></td>
+                        <td id="num5"></td>
+                        <td id="gpa5"></td>
+                        <td id="grade5"></td>
+                    </tr>
+                    
+
+                </table>
+
+
+                </div>
+
                 <div id="registration" class="registration">
                     <form id="reg_form" class="reg_form">
                         <h3 class="semester">Select Semester:</h3>
