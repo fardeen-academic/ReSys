@@ -301,3 +301,24 @@ h4{
 .result #resultform{
     margin-bottom: 20px;
 }
+.mobile{
+    display: none;
+}
+
+@media only screen and (max-width:1000px){
+    .container{
+        display: none;
+    }
+    .mobile{
+        display: block;
+        text-align: center;
+        margin: 30% 5%;
+        line-height: 30px;
+    }
+    h3{
+        color: black;
+    }
+    h4{
+        color: #2d3041;
+    }
+}

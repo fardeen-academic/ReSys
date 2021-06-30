@@ -12,13 +12,20 @@
     <div class="container">
         <img src="img/download.png">
         <h2 id="title">Student Login</h2>
-        <form>
+        <form id="loginform">
             <input type="email" class="input" id="email" placeholder="Email"><br>
             <input type="password" class="input" id="password" placeholder="Password">
             <br>
             <input type="button" class="btn" onclick="login()" value="Login">
+            <p id="forgotpass" onclick="showprform()">Forgot Password?</p>
         </form>
-        <p id="titlebutton" onclick="changetitle()">Not Student? Login as Admin.</p>
+        <form id="p_resetform">
+            <input type="email" class="input" id="resetemail" placeholder="Email">
+            <br>
+            <input type="button" class="btn" onclick="resetpassword()" value="Reset Password">
+            <p id="forgotpass" onclick="showlform()">Login with Password</p>
+        </form>
+        
     </div>
     <script>
         document.addEventListener('contextmenu', event => event.preventDefault());
