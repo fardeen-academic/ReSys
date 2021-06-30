@@ -25,16 +25,17 @@ firebase.auth().onAuthStateChanged(function(user){
   }
 });
 var pagetitle = document.getElementById("pagetitle")
-p.style.display = "none";
+p.style.display = "block";
 c.style.display = "none";
 reg.style.display = "none";
-res.style.display="block";
+res.style.display="none";
 var sname,sid;    
 
 function profile(){
     p.style.display = "block";
     c.style.display = "none";
     reg.style.display = "none";
+    res.style.display="none";
     document.getElementById("pagetitle").innerHTML = "Profile";
     document.getElementById("sid").innerHTML = sid;
     document.getElementById("sname").innerHTML = sname;
@@ -44,6 +45,7 @@ function registration(){
   reg.style.display = "block";
   p.style.display = "none";
   c.style.display = "none";
+  res.style.display="none";
   document.getElementById("pagetitle").innerHTML = "Registration";
 }
 
@@ -239,7 +241,6 @@ function renderresult(doc){
   gpa=get_gpa(doc.r5)
   document.getElementById('gpa5').innerHTML = gpa[0];
   document.getElementById('grade5').innerHTML = gpa[1];
-  
   
 }
 

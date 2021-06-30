@@ -45,6 +45,9 @@ body{
     border: 1px black solid;
     border-radius: 10px;
     height: 35px;
+    /*padding-top: 5px;
+    padding-bottom: 5px;
+    */
     width: 80px;
 }
 
@@ -60,6 +63,9 @@ body{
     border-radius: 10px;
     height: 35px;
     width: 80px;
+    /*padding-top: 5px;
+    padding-bottom: 5px;
+    */
 }
 
 .container{
@@ -291,4 +297,7 @@ h4{
 #semesternum{
     height: 50px;
     width: 200px;
+}
+.result #resultform{
+    margin-bottom: 20px;
 }
