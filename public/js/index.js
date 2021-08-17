@@ -17,7 +17,7 @@ function showprform(){
 function showlform(){
     lform.style.display = 'block';
     prform.style.display = 'none';
-    title.innerHTML("Student Login");
+    title.innerHTML = "Student Login";
 }
 
 
